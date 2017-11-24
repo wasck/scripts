@@ -1,0 +1,17 @@
+apkgws=(
+  htop
+  sshfs
+  zsh
+  tree
+  vim
+  wget
+  curl
+  atom
+  git
+  i3
+  dmenu
+  feh
+  gcc
+  jdk8-openjdk
+  jdk9-openjdk
+);

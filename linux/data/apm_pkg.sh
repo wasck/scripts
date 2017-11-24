@@ -1,0 +1,16 @@
+apmpkg=(
+  emmet
+  linter
+  linter-eslint
+  linter-scss-lint
+  highlight-selected
+  minimap-highlight-selected
+  file-icons
+  pigments
+  minimap
+  autocomplete-paths
+  autoclose-html
+  simple-drag-drop-text
+  atom-latex
+  pdf-view
+);
