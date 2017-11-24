@@ -25,6 +25,7 @@ scp -r $connectionString/priv/* /tmp/remoteData/;
 
 cp /tmp/remoteData/ssh/{config,id_rsa,id_rsa.pub} ~/.ssh/
 cp /tmp/remoteData/zsh/zshrc ~/.zshrc
+chsh -s $(which zsh)
 sudo cp /tmp/remoteData/linux/hosts /etc/hosts
 
 if [ ! -d ~/.config/i3 ]
