@@ -42,7 +42,7 @@ for pack in ${apmpkg[*]}; do
 done
 
 # Symbolic links
-sudo ln -s /usr/bin/xdg-open /usr/locl/bin/op
+sudo ln -s /usr/bin/xdg-open /usr/local/bin/op
 
 if [ -d /tmp/remoteData/ ]
 then

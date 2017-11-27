@@ -13,4 +13,5 @@ apmpkg=(
   simple-drag-drop-text
   atom-latex
   pdf-view
+  ide-java
 );
