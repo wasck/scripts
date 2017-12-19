@@ -4,21 +4,13 @@
 
 distro=$(cat /etc/os-release | grep "^ID" | cut -d= -f2);
 
-if [ $distro == "manjaro" ]
-then
+if [ $distro == "manjaro" ]; then
   ./os/client_manjaro.sh
 
-elif [ $distro == "ubuntu"]
-then
-  ./os/client_ubuntu.sh
-
-elif [ $distro == "debian" ]
-then
+elif [ $distro == "debian" ]; then
   ./os/server_debian.sh
-fi
 
-# Symbolic links
-sudo ln -s /usr/bin/xdg-open /usr/local/bin/op
+fi
 
 if [ -d /tmp/remoteData/ ]
 then
@@ -29,8 +21,7 @@ fi
 echo "Do you want to reboot (y/n)?"
 read rbt
 
-if [ $rbt == "y" ]
-then
+if [ $rbt == "y" ] || [ $rbt == "j" ]; then
   echo "done. Rebooting..."
   reboot
 else

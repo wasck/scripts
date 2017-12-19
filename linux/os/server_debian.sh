@@ -15,6 +15,7 @@ addgroup wschik sshusers
 addgroup wschik sudo
 
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+cp ~/.vim_runtime /home/wschik
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 echo "connecting to remote server via ssh";
@@ -32,11 +33,8 @@ cp /tmp/remoteData/zsh/zshrc ~/.zshrc
 chsh -s $(which zsh)
 sudo cp /tmp/remoteData/linux/hosts /etc/hosts
 
-su wschik
+cp /tmp/remoteData/ssh/* ~/.ssh/ && cp -r ~/.ssh/ /home/wschik/
+cp /tmp/remoteData/zsh/zshrc ~/.zshrc && cp ~/.zshrc /home/wschik/
 
-cp /tmp/remoteData/ssh/* ~/.ssh/
-cp /tmp/remoteData/zsh/zshrc ~/.zshrc
-chsh -s $(which zsh)
-sudo cp /tmp/remoteData/linux/hosts /etc/hosts
-
-exit
+chown -R wschik:wschik /home/wschik/.ssh/*
+chown -R wschik:wschik /home/wschik/.zshrc

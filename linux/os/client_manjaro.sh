@@ -11,6 +11,9 @@ apmpkg=(emmet linter linter-eslint linter-scss-lint highlight-selected
   autoclose-html simple-drag-drop-text atom-latex pdf-view ide-java
 );
 
+sudo sed s/'^#Color'/Color/ /etc/pacman.conf -i
+sudo sed s/'^#TotalDownload'/TotalDownload/ /etc/pacman.conf -i
+sudo sed '40aILoveCandy' /etc/pacman.conf -i
 
 # update system
 sudo pacman -Syyu
@@ -45,3 +48,6 @@ cp /tmp/remoteData/ssh/* ~/.ssh/
 cp /tmp/remoteData/zsh/zshrc ~/.zshrc
 chsh -s $(which zsh)
 sudo cp /tmp/remoteData/linux/hosts /etc/hosts
+
+# Symbolic links
+sudo ln -s /usr/bin/xdg-open /usr/local/bin/op
