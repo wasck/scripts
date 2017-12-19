@@ -2,9 +2,8 @@
 
 echo "You are using manjaro..."
 
-syspkg=(htop sshfs zsh tree vim wget curl atom git i3 dmenu feh gcc
-  jdk8-openjdk
-  jdk9-openjdk
+syspkg=(htop sshfs zsh tree vim wget curl atom git i3 dmenu feh base-devel
+        devtools jdk8-openjdk jdk9-openjdk
 );
 
 apmpkg=(emmet linter linter-eslint linter-scss-lint highlight-selected

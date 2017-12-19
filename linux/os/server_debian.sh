@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "you are using debian..."
 
-syspkg=(sudo htop sshfs zsh tree vim wget curl git build-essential
+syspkg=(sudo htop zip unzip sshfs zsh tree vim wget curl git build-essential
         openjdk-9-jdk
       );
 
