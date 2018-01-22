@@ -3,12 +3,14 @@
 echo "You are using manjaro..."
 
 syspkg=(htop sshfs zsh tree vim wget curl atom git i3 dmenu feh base-devel
-        docker language-docker devtools jdk8-openjdk jdk9-openjdk
+        docker docker-compose docker-machine devtools jdk8-openjdk jdk9-openjdk
+        keepassxc thunderbird
 );
 
 apmpkg=(emmet linter linter-eslint linter-scss-lint highlight-selected
   minimap-highlight-selected file-icons pigments minimap autocomplete-paths
   autoclose-html simple-drag-drop-text atom-latex pdf-view ide-java
+  docker language-docker
 );
 
 sudo sed s/'^#Color'/Color/ /etc/pacman.conf -i
@@ -42,9 +44,10 @@ read remoteServer;
 connectionString="$username@$remoteServer";
 
 mkdir /tmp/remoteData
-scp -r $connectionString/priv/* /tmp/remoteData/;
+scp -r $connectionString /tmp/remoteData/;
 
 cp /tmp/remoteData/ssh/* ~/.ssh/
+cp /tmp/remoteData/i3/config.new ~/.config/i3/config
 cp /tmp/remoteData/zsh/zshrc ~/.zshrc
 chsh -s $(which zsh)
 sudo cp /tmp/remoteData/linux/hosts /etc/hosts
