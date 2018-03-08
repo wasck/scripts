@@ -5,7 +5,7 @@
 distro=$(cat /etc/os-release | grep "^ID" | cut -d= -f2);
 
 if [ $distro == "manjaro" ]; then
-  ./os/client_manjaro.sh
+  ./os/client_manjaro_architect.sh
 
 elif [ $distro == "debian" ]; then
   ./os/server_debian.sh
@@ -21,7 +21,8 @@ fi
 echo "Do you want to reboot (y/n)?"
 read rbt
 
-if [ $rbt == "y" ] || [ $rbt == "j" ]; then
+if [ $rbt == "y" ] || [ $rbt == "j" ] || [ $rbt == "Y" ] ||
+  [ $rbt == "J" ] || [ $rbt == "" ]; then
   echo "done. Rebooting..."
   reboot
 else
