@@ -19,9 +19,9 @@ if ( ! ( Test-Path -Path $PROFILE ) ) {
   New-Item -Path $PROFILE -ItemType File
 }
 
-Write-Output "`n`nSet-Alias ls Get-ChildItem-Color -option AllScope -Force" | Out-File $PROFILE -Append -encoding ASCII
-Write-Output "Set-Alias ls Get-ChildItem-Color -option AllScope -Force" | Out-File $PROFILE -Append -encoding ASCII
-Write-Output "Set-Alias dir Get-ChildItem-Color -option AllScope -Force" | Out-File $PROFILE -Append -encoding ASCII
+Write-Output "`n`nSet-Alias ls Get-ChildItem -option AllScope -Force" | Out-File $PROFILE -Append -encoding ASCII
+Write-Output "Set-Alias ll Get-ChildItem -option AllScope -Force" | Out-File $PROFILE -Append -encoding ASCII
+Write-Output "Set-Alias dir Get-ChildItem -option AllScope -Force" | Out-File $PROFILE -Append -encoding ASCII
 
 Import-Module -Name posh-git
 Start-SshAgent
