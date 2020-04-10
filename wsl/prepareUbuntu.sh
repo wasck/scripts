@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Update system
-sudo apt update && sudo apt upgrade -y
-
 # Install packages
 sudo apt install vim zsh htop git wget curl
 
