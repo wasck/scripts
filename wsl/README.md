@@ -15,6 +15,9 @@
    ```Bash
    git clone https://github.com/wasck/scripts.git
    cd scripts/wsl
+   ```
+7. Execute script
+   ```Bash
    chmod u+x ./prepareUbuntu.sh
    ./prepareUbuntu.sh
    ```
