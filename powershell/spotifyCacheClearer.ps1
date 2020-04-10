@@ -1,5 +1,5 @@
 $spotifyStorage = "C:\Users\" + $env:USERNAME + "\AppData\Local\Spotify\Storage"
-[Decimal]$maxSizeInMb = 1000.0
+[Decimal]$maxSizeInMb = 100.0
 
 if (! (Test-Path $spotifyStorage) ) { Exit } 
 
